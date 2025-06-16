@@ -3,7 +3,7 @@
 [cc-badge]: https://img.shields.io/badge/License-CC_BY--NC--SA_4.0-lightgrey.svg
 [cc-license]: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
-# BANEmo Dataset: Bangla Emotion Analysis
+# BANEmo Dataset: Bangla Sentiment Analysis
 
 ## 📖 Overview
 Manually annotated dataset of **14,903 Bangla comments** from social media/news sources for emotion classification.  
