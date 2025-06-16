@@ -6,7 +6,7 @@
 # BANEmo Dataset: Bangla Sentiment Analysis
 
 ## 📖 Overview
-Manually annotated dataset of **14,903 Bangla comments** from social media/news sources for emotion classification.  
+Manually annotated dataset of **14,903 Bangla comments** from social media/news sources for sentiment classification.  
 Used in paper: _"From Trees to Transformers: Advancement in Bengali Sentiment Classification on BANEMO with mBERT and Deep Learning"_ 
 
 ## 📊 Dataset Statistics
