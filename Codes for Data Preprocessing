@@ -1,0 +1,45 @@
+library(reticulate)
+library(tidyverse)
+library(keras)
+library(tensorflow)
+
+comments.data01<-read_csv(file = "Bangla Comments.csv", locale = locale(encoding = "UTF-8"))
+
+
+
+View(comments.data01)
+comments.data01<-comments.data01[,c("FinalTag","Comments")]
+
+#removing punctuation marks from the comments
+comments.data01$Comments<-gsub('[[:punct:] ]+',' ', comments.data01$Comments)
+
+#removing the full stop
+comments.data01$Comments<-gsub('।',' ', comments.data01$Comments)
+
+#optional. Filtering happiness and sadness comments
+comments.data01<-comments.data01[comments.data01$FinalTag %in% c("Happiness","Sadness"),]
+dim(comments.data01)
+table(comments.data01$FinalTag)
+index<-sample(1:length(comments.data01$FinalTag))
+comments.data01<-comments.data01[index,]
+
+Labels<-comments.data01$FinalTag
+Labels01<-ifelse(Labels=="Happiness",1,0)
+Labels[1:10]
+Labels01[1:10]
+
+
+
+#preparing the data
+Labels<-comments.data01$FinalTag
+
+Labels01<-case_when(Labels=="Anger" ~ 0,
+                    Labels=="Disgust" ~ 1,
+                    Labels=="Fear" ~ 2,
+                    Labels=="Happiness" ~ 3,
+                    Labels=="Sadness" ~ 4,
+                    Labels=="Sarcasm" ~ 5,
+                    Labels=="Surprise" ~ 6,
+                    TRUE ~ 7)
+
+Labels01.encoded<-to_categorical(Labels01)
