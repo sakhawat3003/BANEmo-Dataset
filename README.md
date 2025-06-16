@@ -1,3 +1,8 @@
+[![CC BY-NC-SA 4.0][cc-badge]][cc-license]
+
+[cc-badge]: https://img.shields.io/badge/License-CC_BY--NC--SA_4.0-lightgrey.svg
+[cc-license]: https://creativecommons.org/licenses/by-nc-sa/4.0/
+
 # BANEmo Dataset: Bangla Emotion Analysis
 
 ## 📖 Overview
